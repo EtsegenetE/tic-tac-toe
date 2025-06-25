@@ -1,126 +1,136 @@
+
 body {
-    background-image: url(./assets/Images/wood.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 730px;
-    width: 600px;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/Images/wood.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .container {
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .title {
-    color: #fff;
-    margin-left: 600px;
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    width: 310px;
-    margin-top: 100px;
-    margin-left: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 310px;
 }
 
 .boxes {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    background: rgba(144, 31, 31, 0.277);
-    display: flex;
-    justify-content: center;
-    font-size: 60px;
-    color: #ffff;
-    cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  background: rgba(144, 31, 31, 0.277);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .btn-container {
-   display: flex;
-   gap: 10px;
-   margin-top: 200px;
-   margin-left: 500px;
-}
-
-.btn {
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 80px;
-    border: 2px solid gray;
+  display: flex;
+  gap: 20px;
+  margin-top: 200px;
+  justify-content: center;
 }
 
 .btn-container button {
-    font-size: 25px;
-    padding: 50px;
-    font-weight: bold;
-    background: rgba(144, 31, 31, 0.277);
-    color: #ffff;
-    cursor: pointer;
+  padding: 20px 40px;
+  font-size: 25px;
+  font-weight: bold;
+  background: rgba(144, 31, 31, 0.277);
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid gray;
 }
- 
+
 .btn-container button:hover {
-    background-color: rgb(107, 95, 95);
+  background-color: rgb(107, 95, 95);
 }
 
 .result-overlay {
-  background-color: #fbda45e3;
   position: fixed;
-  width: 600px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.result-model {
+  width: 400px;
   height: 200px;
-  top: 30%;
-  left: 30%;
+  background-color: #fbda45e3;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.result-model h2 {
+  font-size: 28px;
+  margin: 0;
 }
 
 .result-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .result-btn .btn {
-    padding: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: rgb(215, 251, 132);
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(215, 251, 132);
+  border: none;
+  cursor: pointer;
 }
 
+.result-btn .btn:hover {
+  background-color: rgb(192, 230, 110);
+}
+
+/* Media Queries for mobile and tablet */
 @media (max-width: 768px) {
-  body {
-    width: 100%;
-    height: 730px;
-    background-size: cover;
+  .title {
+    font-size: 30px;
   }
 
   .board {
     width: 270px;
-    margin-left: 250px;
-    gap: 5px;
   }
 
   .boxes {
     width: 80px;
     height: 80px;
-    font-size: 60px;
-    padding-top: 10px;
-  }
-
-  .title {
-    font-size: 30px;
-    margin-top: 20px;
-    margin-left: 100px;
+    font-size: 40px;
   }
 
   .btn-container {
     flex-direction: column;
-    margin-left: 250px;
     gap: 20px;
-    width: 200px;
   }
 
   .btn-container button {
@@ -128,24 +138,21 @@ body {
     font-size: 20px;
   }
 
-  .result-overlay {
-    margin-left: -55px;
-    width: 500px;
+  .result-model {
+    width: 300px;
+    height: 180px;
   }
 
-  .result-model {
-    margin: 0 50px;
+  .result-model h2 {
+    font-size: 24px;
   }
 
   .result-btn {
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
   }
 
   .result-btn .btn {
-    padding: 15px;
-    font-size: 18px;
-    
+    font-size: 16px;
   }
 }
