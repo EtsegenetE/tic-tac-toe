@@ -13,8 +13,8 @@ export default function PlayerSelect() {
 
     return (
         <div className="btn-container">
-            <button className="btn" onClick={() => handleClick("1")}>Player 1</button>
-            <button className="btn"  onClick={() => handleClick("2")}>Player 2</button>
+            <button className="btn" onClick={() => handleClick("1")}>Play with Bot</button>
+            <button className="btn"  onClick={() => handleClick("2")}>Play with Friend</button>
         </div>
     );
 }

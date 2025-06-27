@@ -9,8 +9,8 @@ export default function GameBoard () {
    const [data, setData] = useState(["", "", "", "", "", "", "", "", ""]);
    const [count, setCount] = useState(0);
    const [lock, setLock] = useState(false);
-    const [winner, setWinner] = useState(null);
-    const navigate = useNavigate();
+   const [winner, setWinner] = useState(null);
+   const navigate = useNavigate();
 
    useEffect (() => {
     if (mode === "1" && count %2 !==0 && !lock){

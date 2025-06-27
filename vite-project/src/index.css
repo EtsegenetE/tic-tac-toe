@@ -112,7 +112,6 @@ body {
   background-color: rgb(192, 230, 110);
 }
 
-/* Media Queries for mobile and tablet */
 @media (max-width: 768px) {
   .title {
     font-size: 30px;
